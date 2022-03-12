@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewCart"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/ic_launcher_background"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/textViewCart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toEndOf="@id/imageViewCart"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="5dp"-->
+<!--        android:text="TextView"-->
+<!--        android:textSize="20sp"/>-->
+
+</RelativeLayout>

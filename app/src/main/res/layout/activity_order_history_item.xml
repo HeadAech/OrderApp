@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/orderHistoryItemView"
+    tools:context=".OrderHistoryItemActivity">
+
+    <TextView
+        android:id="@+id/orderHistoryItemTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2999"
+        android:textSize="28sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@id/orderHistoryItemTotal"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/pln_text" />
+
+    <TextView
+        android:id="@+id/orderedAtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ordered_at"
+        android:textSize="18sp"
+        android:layout_below="@id/orderHistoryItemTotal"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/orderHistoryItemDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/orderedAtText"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/forCompanyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/for_company"
+        android:layout_below="@id/orderHistoryItemDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/companyNameOrderHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/forCompanyText"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/orderHistoryItemScrollView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/companyNameOrderHistory"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/orderHistoryItemLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

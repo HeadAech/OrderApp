@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewOrderHistoryItem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/priceOrderHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="100 PLN"
+        android:layout_below="@id/imageViewOrderHistoryItem"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/orderHistoryItemX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewOrderHistoryItem"
+        android:textSize="20sp"
+        android:text="x"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/priceOrderHistoryItem"/>
+    <TextView
+        android:id="@+id/qtyOrderHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:layout_below="@id/imageViewOrderHistoryItem"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:layout_toEndOf="@id/orderHistoryItemX"/>
+
+    <TextView
+        android:id="@+id/textViewOrderHistoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="TextView"
+        android:layout_toEndOf="@id/imageViewOrderHistoryItem"
+        android:gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/orderHistoryItemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/textViewOrderHistoryItem"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/imageViewOrderHistoryItem"
+        android:textAlignment="textEnd"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/plnOrderHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orderHistoryItemDescription"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:text="@string/pln_text" />
+
+    <TextView
+        android:id="@+id/itemOrderHistoryTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderHistoryItemDescription"
+        android:layout_toStartOf="@id/plnOrderHistoryItem"
+        android:text="2999"
+        android:textSize="22sp" />
+
+</RelativeLayout>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/orderViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wybierz_konfiguracje"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textSize="28sp"/>
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_below="@id/orderViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/nazwa_konfiguracjiTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:text="@string/wybrana_konfiguracja"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nazwa_konfiguracjiTitle"
+            android:layout_centerHorizontal="true"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nazwa_konfiguracjiTitle"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/priceText"
+            android:text="@string/pln_text" />
+
+        <ImageView
+            android:id="@+id/orderImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/priceText"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/configurationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceText"
+            android:layout_toEndOf="@id/orderImage"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"
+            android:text="pc"
+            android:layout_marginEnd="20dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/configurationDescription"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/configurationName"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:text="opis"
+            android:textAlignment="textEnd"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/inStockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/in_stock"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/configurationDescription"
+            android:layout_marginTop="1dp"/>
+
+        <TextView
+            android:id="@+id/inStockNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/inStockText"
+            android:text="X"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderPc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inStockNumber"
+            android:valueFrom="1"
+            android:valueTo="100"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/pcSliderPicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_toEndOf="@id/sliderPc"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/inStockNumber"/>
+
+
+        <TextView
+            android:id="@+id/dodatkiTitle"
+            android:layout_below="@id/sliderPc"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:text="@string/dobierz_dodatki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"/>
+
+        <CheckBox
+            android:id="@+id/klawiatura_checkbox"
+            android:layout_below="@+id/dodatkiTitle"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/akc_klawiatura"
+            android:textSize="18sp"
+            android:onClick="onCheckboxClicked"/>
+
+        <RelativeLayout
+            android:id="@+id/klawiaturaAddonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/klawiatura_checkbox"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+
+            <Spinner
+                android:id="@+id/spinnerKeyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/keyboardPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerKeyboard"
+                android:layout_centerHorizontal="true"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerKeyboard"
+                android:layout_toEndOf="@id/keyboardPrice"
+                android:layout_marginTop="0dp"
+                android:text="@string/pln_text"/>
+
+            <ImageView
+                android:id="@+id/keyboardImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_below="@id/keyboardPrice"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/keyboardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keyboardPrice"
+                android:layout_toEndOf="@id/keyboardImage"
+                android:text="Keyboard"
+                android:textAlignment="textEnd"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/keyboardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keyboardName"
+                android:text="Keyboard Description"
+                android:layout_toEndOf="@id/keyboardImage"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="20dp"/>
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/keyboardSlider"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:valueFrom="1"
+                android:layout_below="@id/keyboardImage"
+                android:valueTo="100"/>
+
+            <TextView
+                android:id="@+id/keyboardSliderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_below="@id/keyboardImage"
+                android:layout_toEndOf="@id/keyboardSlider"
+                android:layout_marginTop="13dp"/>
+
+        </RelativeLayout>
+
+
+
+        <CheckBox
+            android:id="@+id/myszka_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/klawiaturaAddonsLayout"
+            android:text="@string/akc_mysz"
+            android:textSize="18sp"
+            android:onClick="onCheckboxClicked"/>
+
+        <RelativeLayout
+            android:id="@+id/myszkaAddonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myszka_checkbox"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+
+            <Spinner
+                android:id="@+id/spinnerMouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/mousePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerMouse"
+                android:layout_centerHorizontal="true"
+                android:text=""/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerMouse"
+                android:layout_toEndOf="@id/mousePrice"
+                android:layout_marginTop="0dp"
+                android:text="@string/pln_text"/>
+
+            <ImageView
+                android:id="@+id/mouseImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_below="@id/mousePrice"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/mouseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mousePrice"
+                android:layout_toEndOf="@id/mouseImage"
+                android:text="Mouse"
+                android:textAlignment="textEnd"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/mouseDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mouseName"
+                android:text="Mouse Description"
+                android:layout_toEndOf="@id/mouseImage"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="20dp"/>
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/mouseSlider"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:valueFrom="1"
+                android:layout_below="@id/mouseImage"
+                android:valueTo="100"/>
+
+            <TextView
+                android:id="@+id/mouseSliderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_below="@id/mouseImage"
+                android:layout_toEndOf="@id/mouseSlider"
+                android:layout_marginTop="13dp"/>
+
+        </RelativeLayout>
+
+
+        <CheckBox
+            android:id="@+id/headset_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myszkaAddonsLayout"
+            android:layout_marginStart="20dp"
+            android:text="@string/akc_headset"
+            android:textSize="18sp"
+            android:onClick="onCheckboxClicked"/>
+
+        <RelativeLayout
+            android:id="@+id/headsetAddonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headset_checkbox"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+
+            <Spinner
+                android:id="@+id/spinnerHeadset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/headsetPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerHeadset"
+                android:layout_centerHorizontal="true"
+                android:text=""/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerHeadset"
+                android:layout_toEndOf="@id/headsetPrice"
+                android:layout_marginTop="0dp"
+                android:text="@string/pln_text"/>
+
+            <ImageView
+                android:id="@+id/headsetImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_below="@id/headsetPrice"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/headsetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headsetPrice"
+                android:layout_toEndOf="@id/headsetImage"
+                android:text="Headset"
+                android:textAlignment="textEnd"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/headsetDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headsetName"
+                android:text="Headset Description"
+                android:layout_toEndOf="@id/headsetImage"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="20dp"/>
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/headsetSlider"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:valueFrom="1"
+                android:layout_below="@id/headsetImage"
+                android:valueTo="100"/>
+
+            <TextView
+                android:id="@+id/headsetSliderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_below="@id/headsetImage"
+                android:layout_toEndOf="@id/headsetSlider"
+                android:layout_marginTop="13dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sumPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headsetAddonsLayout"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wartosc_zamowienia"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sumPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/sumPriceText"
+            android:layout_marginTop="10dp"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sumPriceText"
+            android:layout_toEndOf="@id/sumPrice"
+            android:layout_marginTop="12dp"
+            android:textSize="15sp"
+            android:text="@string/pln_text"/>
+
+        <Button
+            android:id="@+id/addToCartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sumPrice"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+                android:text="@string/add_to_cart"/>
+
+    </RelativeLayout>
+</ScrollView>

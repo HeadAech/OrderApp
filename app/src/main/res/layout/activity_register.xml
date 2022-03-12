@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_text"
+        android:textSize="32sp"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/registerLoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/registerText"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:hint="Login"/>
+
+    <EditText
+        android:id="@+id/registerImieEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerLoginEditText"
+        android:inputType="textPersonName"
+        android:layout_marginStart="20dp"
+        android:singleLine="true"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/first_name"
+        android:maxLines="1" />
+    <EditText
+        android:id="@+id/registerNazwiskoEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerImieEditText"
+        android:layout_marginStart="20dp"
+        android:inputType="textPersonName"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:hint="@string/last_name"/>
+    <EditText
+        android:id="@+id/registerEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerNazwiskoEditText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:hint="@string/e_mail"/>
+
+    <EditText
+        android:id="@+id/registerPhoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerEmailEditText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/phone_text"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/registerPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerPhoneEditText"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:hint="@string/password_text"/>
+    <EditText
+        android:id="@+id/registerRepeatPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerPasswordEditText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:hint="@string/repeat_password_text"/>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_text"
+        android:layout_below="@id/registerRepeatPasswordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

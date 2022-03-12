@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/accesoryImageViewCart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launcher_background"/>
+    <TextView
+        android:id="@+id/accesoryTextViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lightning McQueen"
+        android:layout_toEndOf="@id/accesoryImageViewCart"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/accesoryCartPrice"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accesoryTextViewCart"
+        android:layout_toEndOf="@id/accesoryImageViewCart"
+        android:text="100"
+        android:textAlignment="textEnd"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accesoryTextViewCart"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@id/accesoryCartPrice"
+        android:text="@string/pln_text" />
+
+    <TextView
+        android:id="@+id/accesoryQtyCartText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accesoryCartPrice"
+        android:text="@string/qty"
+        android:layout_toEndOf="@id/accesoryImageViewCart"
+        android:layout_marginStart="120dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/accesoryQtyCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/accesoryQtyCartText"
+        android:text="10"
+        android:layout_below="@id/accesoryCartPrice"
+        android:textSize="20sp"
+        android:textAlignment="textEnd"
+        android:layout_marginEnd="20dp"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_below="@id/accesoryQtyCartText"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"/>
+
+
+
+
+</RelativeLayout>

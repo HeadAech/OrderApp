@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="klawiatura_checkbox" type="id" />
+    <item name="myszka_checkbox" type="id" />
+    <item name="headset_checkbox" type="id" />
+</resources>

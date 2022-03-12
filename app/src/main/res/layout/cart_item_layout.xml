@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/cartItemDividerTop"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="2dp" />
+
+    <ImageView
+        android:id="@+id/imageViewCart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_margin="10dp"
+        android:layout_below="@id/cartItemDividerTop"/>
+
+    <TextView
+        android:id="@+id/textViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="TextView"
+        android:layout_toEndOf="@id/imageViewCart"
+        android:gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/deleteBtnCart"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/usun"
+        android:textSize="14sp"
+        android:backgroundTint="#f00"
+        android:layout_below="@id/imageViewCart"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-8dp"/>
+
+    <TextView
+        android:id="@+id/cartDescriptionPc"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/textViewCart"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/imageViewCart"
+        android:textAlignment="textEnd"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/pcCartPrice"
+        android:layout_width="221dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cartDescriptionPc"
+        android:layout_toEndOf="@id/imageViewCart"
+        android:text="100"
+        android:textAlignment="textEnd"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cartDescriptionPc"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/pcCartPrice"
+        android:text="@string/pln_text" />
+
+
+    <TextView
+        android:id="@+id/cartPcQtyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pcCartPrice"
+        android:text="@string/qty"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:layout_marginStart="270dp"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/cartPcQty"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pcCartPrice"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="208dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@id/imageViewCart"
+        android:text="10"
+        android:textAlignment="textEnd"
+        android:textSize="22sp" />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/cartItemDividerBottom"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/cartPcQty"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/accessoriesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/cartItemDividerBottom"
+        android:layout_marginTop="10dp">
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
